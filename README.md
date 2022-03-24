@@ -8,6 +8,7 @@ CHANGE PORT IN docker-compose.yml FOR nginx
 docker-compose up -d --build
 docker-compose run --rm php composer install
 docker-compose run --rm php /var/www/html/init --env=[Production|Development] --overwrite=[Yes|No]
+add database connection in common/config/main-local.php
 docker-compose run --rm php /var/www/html/yii migrate --migrationPath=@yii/rbac/migrations
 docker-compose run --rm php /var/www/html/yii rbac/init
 docker-compose run --rm php /var/www/html/yii migrate

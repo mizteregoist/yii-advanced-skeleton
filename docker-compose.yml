@@ -12,8 +12,8 @@ services:
       - ./docker/logs/nginx:/var/log/nginx
       - ./:/var/www/html
     ports:
-      - "51080:80"
-      - "51443:443"
+      - "50080:80"
+      - "50443:443"
     environment:
       - NGINX_ENTRYPOINT_QUIET_LOGS=1
     networks:
