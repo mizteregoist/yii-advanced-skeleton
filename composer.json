@@ -1,0 +1,80 @@
+{
+	"name": "yiisoft/yii2-app-advanced",
+	"description": "Yii 2 Advanced Project Template",
+	"keywords": [
+		"yii2",
+		"framework",
+		"advanced",
+		"project template"
+	],
+	"homepage": "https://www.yiiframework.com/",
+	"type": "project",
+	"license": "BSD-3-Clause",
+	"support": {
+		"issues": "https://github.com/yiisoft/yii2/issues?state=open",
+		"forum": "https://www.yiiframework.com/forum/",
+		"wiki": "https://www.yiiframework.com/wiki/",
+		"irc": "irc://irc.freenode.net/yii",
+		"source": "https://github.com/yiisoft/yii2"
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"require": {
+		"php": ">=7.4",
+		"yiisoft/yii2": ">=2.0.45",
+		"yiisoft/yii2-jui": "^2.0",
+		"yiisoft/yii2-redis": "^2.0",
+		"yiisoft/yii2-imagine": "^2.0",
+		"yiisoft/yii2-bootstrap": "^2.0",
+		"yiisoft/yii2-bootstrap4": "^2.0",
+		"yiisoft/yii2-swiftmailer": "^2.0",
+		"2amigos/yii2-ckeditor-widget": "*",
+		"2amigos/yii2-date-picker-widget": "*",
+		"2amigos/yii2-date-time-picker-widget": "*",
+		"kartik-v/bootstrap-fileinput": "=5.0.4",
+		"kartik-v/yii2-widget-colorinput": "=1.0.5",
+		"kartik-v/yii2-widget-activeform": "=1.5.8",
+		"kartik-v/yii2-widgets": "dev-master",
+		"kartik-v/yii2-export": "=1.4.0",
+		"kartik-v/yii2-icons": "*",
+		"rmrevin/yii2-fontawesome": "^3.5.0",
+		"iutbay/yii2-kcfinder": "*",
+		"mero/yii2-monolog": "^0.1.2",
+		"yii2mod/yii2-rbac": "*",
+		"ext-mbstring": "*",
+		"ext-json": "*",
+		"ext-dom": "*"
+	},
+	"require-dev": {
+		"yiisoft/yii2-debug": "^2.0",
+		"yiisoft/yii2-gii": "^2.0",
+		"yiisoft/yii2-faker": "^2.0",
+		"codeception/codeception": "^4.0",
+		"codeception/module-asserts": "^1.0",
+		"codeception/module-yii2": "^1.0",
+		"codeception/module-filesystem": "^1.0",
+		"codeception/verify": "~0.5.0 || ~1.1.0",
+		"symfony/browser-kit": ">=2.7 <=4.2.4"
+	},
+	"config": {
+		"process-timeout": 1800,
+		"fxp-asset": {
+			"enabled": false
+		},
+		"allow-plugins": {
+			"yiisoft/yii2-composer": true
+		}
+	},
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://asset-packagist.org"
+		}
+	],
+	"extra": {
+		"asset-installer-paths": {
+			"bower-asset-library": "vendor/bower",
+			"npm-asset-library": "vendor/npm"
+		}
+	}
+}
