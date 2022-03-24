@@ -127,13 +127,13 @@ class UserController extends Controller
 		$post = Yii::$app->request->post();
 		$model = new User();
 		if ($model->load($post) && $model->validate()) {
-			if (!empty($model->group)) {
-				$model->setGroup($model->group);
-			}
 			if (!empty($model->password)) {
 				$model->setPassword($model->password);
 			}
 			if ($model->save()) {
+				if (!empty($model->group)) {
+					$model->setGroup($model->group);
+				}
 				Yii::$app->session->setFlash('success', 'Пользователь успешно создан');
 				return $this->redirect(['/user/user/index']);
 			}
