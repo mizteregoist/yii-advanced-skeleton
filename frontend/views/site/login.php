@@ -5,7 +5,7 @@
 
 /* @var $model LoginForm */
 
-use common\models\LoginForm;
+use backend\modules\user\forms\LoginForm;
 use yii\bootstrap4\ActiveForm;
 use yii\bootstrap4\Html;
 use yii\web\View;
