@@ -5,6 +5,15 @@ return [
 		'@bower' => '@vendor/bower-asset',
 		'@npm' => '@vendor/npm-asset',
 	],
+	'container' => [
+		'definitions' => [
+			\yii\widgets\LinkPager::class => \yii\bootstrap4\LinkPager::class,
+			'yii\bootstrap4\LinkPager' => [
+				'firstPageLabel' => 'First',
+				'lastPageLabel'  => 'Last'
+			]
+		],
+	],
 	'components' => [
 		'authManager' => [
 			'class' => 'yii\rbac\DbManager',

@@ -103,11 +103,6 @@ return [
 			'baseUrl' => '@web/assets',
 			'linkAssets' => false,
 			'appendTimestamp' => true,
-			'bundles' => [
-				'dosamigos\multiselect\MultiSelectAsset' => [
-					'depends' => ['yii\bootstrap4\BootstrapPluginAsset'],
-				],
-			],
 		],
 		'authManager' => [
 			'class' => 'yii\rbac\DbManager',
