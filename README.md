@@ -36,6 +36,16 @@ php -r "unlink('composer-setup.php');"
 Optimize-VHD {%USER%}\AppData\Local\Docker\wsl\data\ext4.vhdx -Mode Full
 ```
 
+GitLab CI/CD 
+```
+1. docker volume create gitlab-runner-config
+
+2. docker run -d --name gitlab-runner --restart always \
+-v /var/run/docker.sock:/var/run/docker.sock \
+-v gitlab-runner-config:/etc/gitlab-runner \
+gitlab/gitlab-runner:latest
+```
+
 DIRECTORY STRUCTURE
 -------------------
 
