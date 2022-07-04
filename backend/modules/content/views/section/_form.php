@@ -7,6 +7,7 @@
  */
 
 use backend\modules\content\models\Content;
+use common\utils\WidgetUtil;
 use dosamigos\ckeditor\CKEditor;
 use kartik\icons\FontAwesomeAsset;
 use yii\helpers\ArrayHelper;
@@ -74,7 +75,7 @@ $dropdownValues = ContentHelper::printSelect($ancestors, $model->id ?? false);
 			<div class="collapse multi-collapse" id="content">
 				<?php try {
 					echo $form->field($model, 'content')
-						->widget(CKEditor::class, ContentHelper::$editorOptions)
+						->widget(CKEditor::class, WidgetUtil::ckeditorOptions())
 						->label(false);
 				} catch (Exception $e) {
 					print_r($e);

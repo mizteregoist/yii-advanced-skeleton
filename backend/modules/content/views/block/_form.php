@@ -8,6 +8,7 @@
 
 use backend\modules\content\models\Content;
 use backend\modules\content\models\ContentFile;
+use common\utils\WidgetUtil;
 use dosamigos\ckeditor\CKEditor;
 use kartik\icons\FontAwesomeAsset;
 use yii\helpers\ArrayHelper;
@@ -94,7 +95,7 @@ $fileInputData = ContentHelper::initFileInput($model);
 			<div class="collapse multi-collapse" id="content">
 				<?php try {
 					echo $form->field($model, 'content')
-						->widget(CKEditor::class, ContentHelper::$editorOptions)
+						->widget(CKEditor::class, WidgetUtil::ckeditorOptions())
 						->label(false);
 				} catch (Exception $e) {
 					print_r($e);

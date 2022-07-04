@@ -9,6 +9,7 @@
 use backend\modules\content\models\Content;
 use backend\modules\content\models\ContentCategory;
 use backend\modules\content\models\ContentFile;
+use common\utils\WidgetUtil;
 use dosamigos\ckeditor\CKEditor;
 use kartik\icons\FontAwesomeAsset;
 use kartik\select2\Select2;
@@ -113,7 +114,7 @@ $fileInputData = ContentHelper::initFileInput($model);
 			<div class="collapse multi-collapse" id="content">
 				<?php try {
 					echo $form->field($model, 'content')
-						->widget(CKEditor::class, ContentHelper::$editorOptions)
+						->widget(CKEditor::class, WidgetUtil::ckeditorOptions())
 						->label(false);
 				} catch (Exception $e) {
 					print_r($e);

@@ -13,33 +13,6 @@ use yii\widgets\ActiveForm;
 
 class ContentHelper
 {
-	static $editorOptions = [
-		'options' => ['rows' => 3],
-		'preset' => 'full',
-		'kcfinder' => true,
-		'kcfOptions' => [
-			'uploadURL' => '/upload/kcf',
-			'uploadDir' => '@upload/kcf',
-			'access' => [
-				'files' => [
-					'upload' => true,
-					'delete' => true,
-					'copy' => true,
-					'move' => true,
-					'rename' => true,
-				],
-				'dirs' => [
-					'create' => true,
-					'delete' => true,
-					'rename' => true,
-				],
-			],
-			'thumbsDir' => '.thumbs',
-			'thumbWidth' => 200,
-			'thumbHeight' => 200,
-		],
-	];
-
 	/**
 	 * @param Content $model
 	 * @param int $type
